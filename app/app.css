@@ -70,3 +70,7 @@ input[type="checkbox"] {
 .view {
   margin-top: 10%
 }
+.message {
+  margin-bottom: 5px;
+  text-align: center;
+}
