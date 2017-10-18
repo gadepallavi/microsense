@@ -1,4 +1,5 @@
 <div>
+    <!-- Display error messages -->
     <div class="message">
         <span class="errormsg" ng-show="MissingOperation && MissingReader">Please select reader and operation below.</span>
         <span class="errormsg" ng-show="MissingReader && !MissingOperation">Please select reader</span>
@@ -19,7 +20,9 @@
                     <label>{{name}}</label>
                 </div>
                 <div class="column">
+                    <!-- Display health status-->
                     <label>{{status}}</label>
+                    <!-- If health status:-->
                     <label ng-if="status==''">Not Available</label>
                 </div>
             </div>
@@ -36,6 +39,7 @@
             </div>
         </div>
     </div>
+    <!-- Display warning messages -->
         <div class="warnings">
             <span class="warningMsg" ng-show="HasWarning && !HasError">Reader has a health status as "WARNING" but don't worry! you can still go ahead and submit the job.</span>
             <span class="errormsg" ng-show="HasError">Cannot Submit job with the health status as "ERROR". Please change the selection.</span>
