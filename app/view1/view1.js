@@ -15,9 +15,6 @@ angular.module('MicroSense.view1', ['ngRoute','MicroSense.services'])
   var postData = {operation: "",readers: []};
 
   $scope.selectedReader = [];
-  /*$scope.readers = "";
-  $scope.operations = "";
-  $scope.health = "";*/
   var map = new Object();
 
   //Get a collection of all readers
