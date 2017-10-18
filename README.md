@@ -1,28 +1,29 @@
 # `microsense`
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+- Display a list of readers in the system.
+- Display the health status of each reader alongside that reader.
+- Allow the user to select a set of readers, select an operation from those available, and press a "Start Job" button to run a job.
+- If a reader has a health status of `ERROR`, do not allow the user to start a job with it. Disabled the "Start Job" button and showed message
+to the user saying cannot proceed with the ERROR status.
+- If a reader has a health status of `WARNING`, allow the user to start the job, but display a warning message bellow the job start button.
+- Considered some test cases and added validation to the page.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire controllers and views together.
 
 
 ## Getting Started
 
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+To get you started you can simply clone the `microsense` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
+You need git to clone the repository. You can get git from [here][git].
 
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
+We also use a number of Node.js tools to initialize and test. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
-### Clone `angular-seed`
+### Clone `microsense`
 
-Clone the `angular-seed` repository using git:
+Clone the `microsense` repository using git:
 
 ```
 git clone https://github.com/gadepallavi/microsense.git
@@ -76,10 +77,10 @@ app/                    --> all of the source files for the application
   app.css               --> default stylesheet
   components/           --> all app specific modules
     data/
-     health.txt
-     job.txt
-     operations.txt
-     readers.txt
+     health.js
+     job.js
+     operations.js
+     readers.js
   view1/                --> the view1 view template and logic
     view1.html            --> the partial template
     view1.js              --> the controller logic
