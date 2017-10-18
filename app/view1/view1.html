@@ -1,0 +1,46 @@
+<div>
+    <div>
+        <span class="errormsg" ng-show="MissingOperation && MissingReader">Please select reader and operation below.</span>
+        <span class="errormsg" ng-show="MissingReader && !MissingOperation">Please select reader</span>
+        <span class="errormsg" ng-show="MissingOperation && !MissingReader">Please select operation.</span>
+    </div>
+
+    <div class="table">
+            <div class="row">
+                <div class="column chkbox"></div>
+                <div class="column">Reader Name</div>
+                <div class="column">Health Status</div>
+            </div>
+            <div class="row" ng-repeat="(name,status) in readerList" >
+                <div class="column">
+                    <input title="reader" alt="Reader checkbox" type="checkbox" value="{{name}}" ng-model="selectedReader[$index]" ng-change="CheckHealthStatus()" required>
+                </div>
+                <div class="column">
+                    <label>{{name}}</label>
+                </div>
+                <div class="column">
+                    <label>{{status}}</label>
+                    <label ng-if="status==''">Not Available</label>
+                </div>
+            </div>
+        </div>
+    <div class="extra table">
+        <div class="row">
+            <div class="column operation">
+                <label>Select Operation : </label>
+                <select title="operation" alt="select operation" id="selectOperationID" ng-model="selectedOperation" ng-options="x for x in operations" required></select>
+            </div>
+
+            <div class="column buttons">
+                <button type="submit" name="submitButton" ng-disabled="HasError" ng-click="Submit()">Submit a Job</button>
+            </div>
+        </div>
+    </div>
+        <div class="warnings">
+            <span class="warningMsg" ng-show="HasWarning && !HasError">Reader has a health status as "WARNING" but don't worry! you can still go ahead and submit the job.</span>
+            <span class="errormsg" ng-show="HasError">Cannot Submit job with the health status as "ERROR". Please change the selection.</span>
+        </div>
+</div>
+
+
+

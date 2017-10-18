@@ -1,0 +1,72 @@
+/* app css stylesheet */
+
+.table {
+  display: table;
+  background-color: whitesmoke;
+}
+.row {
+  display: table-row;
+  width: 100%;
+}
+.column:first-child
+{
+  width: 2%;
+}
+.column {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px;
+  width: 49%; /*20%;*/
+  border: 1px solid #000;
+}
+
+html,
+body {
+  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+
+  color: #4d4d4d;
+  min-width: 30px;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 300;
+}
+button,
+input[type="checkbox"] {
+  outline: none;
+}
+
+.errormsg {
+  color:red;
+}
+.warningMsg {
+    color:orange;
+}
+
+.row:first-child
+{
+  font-weight: 700;
+}
+.row .column:first-child
+{
+  width: 20px;
+}
+.extra.table
+{
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #000;
+}
+.extra .column
+{
+    width: 50%;
+  border: none;
+}
+.operation
+{
+    padding: 10px;
+}
+.view {
+  margin-top: 10%
+}
