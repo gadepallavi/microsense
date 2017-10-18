@@ -63,7 +63,7 @@ this server is:
 ```
 npm start
 ```
-Now browse the index.html
+Now browse the index.html or you can open index.html in browser from your editor. I used Webstorm editor.
 
 
 ## Directory Layout
