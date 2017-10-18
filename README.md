@@ -82,7 +82,7 @@ app/                    --> all of the source files for the application
      operations.js
      readers.js
   view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
+    view1.html            --> the view html template
     view1.js              --> the controller logic
     view1_test.js         --> tests of the controller
   app.js                --> main application module
