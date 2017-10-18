@@ -23,7 +23,9 @@ angular.module('MicroSense.services.dataService', [])
                 headers: {'Content-Type': 'application/json'}
             }).then(function(response) {
                 var res = response.config.data;
-                //Display the response data which is a JSON Object with two parameters 1) Operation [String] Readers [Array]
+                //Display the response data which is a JSON Object with two parameters:
+                //1 operation [String] one of the operations available to be run
+                //2 readers [Array] an array of reader names that should begin running this operation
                 console.log("response data" + res);
             }, function errorCallback(response) {
                 console.log(response);
