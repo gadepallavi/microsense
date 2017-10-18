@@ -15,6 +15,9 @@ angular.module('MicroSense.view1', ['ngRoute','MicroSense.services'])
   var postData = {operation: "",readers: []};
 
   $scope.selectedReader = [];
+
+  //Create a map data structure to handle readers and their health status in an effective way so that in case of a large no of data,
+    //it will not hamper system performance.
   var map = new Object();
 
   //Get a collection of all readers
