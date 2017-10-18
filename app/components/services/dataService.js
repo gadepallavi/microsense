@@ -7,7 +7,7 @@ angular.module('MicroSense.services.dataService', [])
             $http({
                 method: 'GET',
                 url: URL
-                //url: '../app/components/data/readers.txt'
+                //url: '../app/components/data/readers.js'
             }).success(function(data){
                 // With the data successfully returned, call our callback
                 callbackFunc(data);

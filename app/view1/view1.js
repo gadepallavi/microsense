@@ -18,19 +18,19 @@ angular.module('MicroSense.view1', ['ngRoute','MicroSense.services'])
   var map = new Object();
 
   //Get a collection of all readers
-  var URLreaders = '../app/components/data/readers.txt';
+  var URLreaders = '../app/components/data/readers.js';
     dataService.getData(URLreaders,function(readers) {
         $scope.readers = readers;
     });
 
   //Get the operations available to be run
-    var URLoperation = '../app/components/data/operations.txt';
+    var URLoperation = '../app/components/data/operations.js';
     dataService.getData(URLoperation,function(operations) {
         $scope.operations = operations;
     });
 
    //Get the collection of health issues in the system
-    var URLhealth = '../app/components/data/health.txt';
+    var URLhealth = '../app/components/data/health.js';
     dataService.getData(URLhealth,function(health) {
         $scope.health = health;
         //Store readers name into map
@@ -69,7 +69,7 @@ angular.module('MicroSense.view1', ['ngRoute','MicroSense.services'])
     };
 
     $scope.Submit = function() {
-        var URLjobs = '../app/components/data/jobs.txt';
+        var URLjobs = '../app/components/data/jobs.js';
         //Set default values for the flags
         $scope.MissingReader = false;
         $scope.MissingOperation = false;
