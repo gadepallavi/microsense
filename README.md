@@ -6,6 +6,9 @@
 - If a reader has a health status of `ERROR`, do not allow the user to start a job with it. Disabled the "Start Job" button and showed message
 to the user saying cannot proceed with the ERROR status.
 - If a reader has a health status of `WARNING`, allow the user to start the job, but display a warning message bellow the job start button.
+- After clicking on "Start Job" calling a POST method with below data and displaying the response in a console log
+ 1) operation [String] one of the operations available to be run
+ 2) readers [Array] an array of reader names that should begin running this operation
 - Considered some test cases and added validation to the page.
 
 
