@@ -6,7 +6,7 @@ to quickly bootstrap your angular webapp projects and dev environment for these 
 The seed contains a sample AngularJS application and is preconfigured to install the Angular
 framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
+The seed app doesn't do much, just shows how to wire controllers and views together.
 
 
 ## Getting Started
@@ -25,14 +25,7 @@ and its package manager (npm) installed. You can get them from [here][node].
 Clone the `angular-seed` repository using git:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
-```
-
-If you just want to start a new project without the `angular-seed` commit history then you can do:
-
-```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
+git clone https://github.com/gadepallavi/microsense.git
 ```
 
 The `depth=1` tells git to only pull down one commit worth of historical data.
@@ -82,21 +75,15 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 app/                    --> all of the source files for the application
   app.css               --> default stylesheet
   components/           --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
+    data/
+     health.txt
+     job.txt
+     operations.txt
+     readers.txt
   view1/                --> the view1 view template and logic
     view1.html            --> the partial template
     view1.js              --> the controller logic
     view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
