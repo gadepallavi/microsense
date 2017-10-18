@@ -3,11 +3,11 @@
 
 angular.module('MicroSense.services.dataService', [])
     .service('dataService', function($http) {
+        //A generic get method which will accept the URL dynamically and get the data
         this.getData = function(URL,callbackFunc) {
             $http({
                 method: 'GET',
                 url: URL
-                //url: '../app/components/data/readers.js'
             }).success(function(data){
                 // With the data successfully returned, call our callback
                 callbackFunc(data);
@@ -15,6 +15,7 @@ angular.module('MicroSense.services.dataService', [])
                 console.log("There is some error in the application");
             });
         };
+        //A generic post method which will accept the URL dynamically and post the data
         this.postData = function(URL,data) {
             $http({
                 url: URL,
