@@ -10,7 +10,7 @@ to the user saying cannot proceed with the ERROR status.
  1) operation [String] one of the operations available to be run
  2) readers [Array] an array of reader names that should begin running this operation
 - Considered some test cases and added validation to the page.
-
+- Made the page responsive so that if user changes the window height and width the page contains will adjust
 
 
 ## Getting Started
